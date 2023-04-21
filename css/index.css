@@ -9,5 +9,5 @@ header h1 svg { width: 1em; height: 1em }
 header .link-metw { width: 2em; height: 2em; padding: .2em }
 
 
-#disable-mouse { position: absolute; inset: 0; z-index: 99999 }
-#load { position: absolute; inset: 0; z-index: 99999 }
+#disable-mouse { position: fixed; inset: 0; z-index: 99999 }
+#load { position: fixed; inset: 0; z-index: 99999 }
