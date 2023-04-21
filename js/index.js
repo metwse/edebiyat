@@ -76,6 +76,7 @@ const app = {
                 root.innerHTML = data
                 for (let script of scripts[0]) root.appendChild(script)
                 oldRoot.parentElement.replaceChild(root, oldRoot)
+                scrollTo({ top: 0, behavior: 'smooth' });
                 return
             })
         }
