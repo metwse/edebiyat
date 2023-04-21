@@ -1,6 +1,6 @@
-* { box-sizing: border-box; font-size: inherit; font-family: rubik, sans-serif; color: inherit }
+* { box-sizing: border-box; font-size: inherit; font-family: inherit; color: inherit }
 
-body { margin: 0; background: var(--bg-body); color: var(--color) }
+body { margin: 0; background: var(--bg-body); color: var(--color); font-family: rubik, sans-serif }
 main { min-height: calc(100vh - 3em) }
 
 header { display: flex; height: 3em; padding: .5em 1em; background: var(--bg-header); justify-content: space-between; align-items: center }

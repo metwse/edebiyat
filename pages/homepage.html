@@ -3,7 +3,7 @@
     r._.page = new URL(d.URL).searchParams.get('sayfa') ?? 1
     if (isNaN(r._.page)) r._.page = 1
     var offset = (r._.page - 1) * 10
-    r._.data = await session.getArticles(Math.min(session.articleCount - offset, 10), offset)
+    r._.data = await session.getArticles(Math.min(session.articleCount - offset, 10), offset, true)
 </script>
 
 

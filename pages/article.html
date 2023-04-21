@@ -1,2 +1,26 @@
+<script init>
+    const id = parseInt(d.URL.match(/\-([\d]*)$/)?.[1]) ?? 0
+    r._.data = await session.getArticle(id)
+</script>
+
+<e-article class="article"></e-article>
+<footer>
+    <a class="back" onclick="javascript:app.redirect('/')">
+        <svg data-darkreader-inline-stroke="" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
+        </svg>
+        ana sayfa
+    </a>
+</footer>
+
+<style>
+    .r footer { padding: 0 2em }
+    .r .back { display: flex; padding: 1em; font-size: 1.25em; color: var(--bg-header); text-decoration: none; align-items: center; gap: 1em }
+    .r .back svg { width: 1.5em; height: 1.5em }
+    .r .back:hover { text-decoration: underline; cursor: pointer }
+</style>
+
 <script>
+    r.article = d.querySelector('.article')
+    r.article.attach(r._.data)
 </script>

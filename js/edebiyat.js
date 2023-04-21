@@ -33,10 +33,10 @@ class Session {
         return new Article({ id, title, author, date, text: data.join('\n')})
     }
 
-    async getArticles(limit, offset) {
-        const list = []
+    async getArticles(limit, offset, reverse) {
+        const list = [], count = await this.articleCount - 1
         for (let i = offset; i < limit + offset; i++) list.push(i)
-        return await Promise.all(list.map(i => this.getArticle(i)))
+        return await Promise.all(list.map(i => this.getArticle(reverse ? count - i : i)))
     }
 
     get articleCount() {
@@ -53,7 +53,7 @@ class Article {
     }
 
     HTML(length) {
-        return mdToHTML(length ? this.text.substring(0, length) + (this.text.length > length ? '...' : '') : this.text.substring)
+        return mdToHTML(length ? this.text.substring(0, length) + (this.text.length > length ? '...' : '') : this.text)
     }
 }
 

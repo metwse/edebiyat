@@ -5,7 +5,7 @@ customElements.define('e-article', class extends HTMLElement {
         this._checked = false
     }
 
-    attach(article, { maxLength }) {
+    attach(article, opt) {
         this.innerHTML = `
             <h2><a href="javascript:app.redirect('/makale/${article.title.replace(/[^\w\d]/g, '-')}--${article.id}')">${article.title}</a></h2>
             <div class="details">
@@ -23,7 +23,7 @@ customElements.define('e-article', class extends HTMLElement {
                 </div>
             </div>
             <img src="/api/images/${article.id}">
-            <div class="text">${article.HTML(maxLength )}</div>
+            <div class="text">${article.HTML(opt?.maxLength)}</div>
         `
     }
 })
