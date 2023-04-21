@@ -1,0 +1,14 @@
+e-article { display: flex; padding: 1em; align-items: center; flex-direction: column; gap: 1em }
+e-article h2 { display: inline-block; margin: 0; max-width: 700px; font-size: 3em; text-align: center }
+e-article h2:hover { text-decoration: underline; cursor: pointer }
+e-article .details { display: flex; column-gap: 4em; flex-wrap: wrap; align-items: center; justify-content: center }
+e-article .details div { align-items: center; display: flex; gap: .5em; opacity: .75 }
+e-article img { width: 100%; max-width: 800px; aspect-ratio: 16 / 9; border-radius: .5em; background: var(--bg-2) }
+e-article .text { max-width: 500px; font-family: tonis, serif; font-size: 1.2em; line-height: 1.1 }
+
+
+e-loading { display: block; margin: 1em auto; width: 1.5em; height: 1.5em; border: .25em solid var(--color); border-radius: 100%; border-right-color: transparent; animation: e-loading .5s linear infinite }
+@keyframes e-loading {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}

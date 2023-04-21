@@ -1,0 +1,13 @@
+* { box-sizing: border-box; font-size: inherit; font-family: rubik, sans-serif; color: inherit }
+
+body { margin: 0; background: var(--bg-body); color: var(--color) }
+main { min-height: calc(100vh - 3em) }
+
+header { display: flex; height: 3em; padding: .5em 1em; background: var(--bg-header); justify-content: space-between; align-items: center }
+header h1 a { display: flex; font-weight: 200; align-items: center; text-decoration: none; gap: .5em }
+header h1 svg { width: 1em; height: 1em }
+header .link-metw { width: 2em; height: 2em; padding: .2em }
+
+
+#disable-mouse { position: absolute; inset: 0; z-index: 99999 }
+#load { position: absolute; inset: 0; z-index: 99999 }
