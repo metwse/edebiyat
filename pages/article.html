@@ -1,5 +1,5 @@
 <script init>
-    const id = parseInt(d.URL.match(/\-([\d]*)$/)?.[1]) ?? 0
+    const id = parseInt(location.pathname.match(/\-([\d]*)$/)?.[1]) ?? 0
     r._.data = await session.getArticle(id)
 </script>
 

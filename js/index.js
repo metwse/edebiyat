@@ -115,5 +115,6 @@ onpopstate = async() => {
 }
 
 onload = async () => {
+    if (location.search.startsWith('?/')) history.replaceState(null, null, location.search.substring(1).replace('&', '?'))
     await app.load()
 }
