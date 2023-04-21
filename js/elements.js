@@ -7,7 +7,7 @@ customElements.define('e-article', class extends HTMLElement {
 
     attach(article, { maxLength }) {
         this.innerHTML = `
-            <h2>${article.title}</h2>
+            <h2><a href="javascript:app.redirect('/makale/${article.title.replace(/[^\w\d]/g, '-')}--${article.id}')">${article.title}</a></h2>
             <div class="details">
                 <div class="author">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">

@@ -90,6 +90,7 @@ const app = {
         this.location.format()
         switch (this.location.pathname[0]) {
             case '': return await this.template.render('homepage')
+            case 'makale': return await this.template.render('article')
             default: return await this.template.render('404')
         }
     },
